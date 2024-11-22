@@ -138,7 +138,9 @@
           take-out establishments and food delivery services.<br> The term covers many types
           of venues and a diversity of styles of cuisine and service.</p>
       </div>
-      <img src="https://ibb.co/BP6n60H" alt="Delicious food" class="home-image">
+      <img src="https://ibb.co/BP6n60H.jpg" alt="Delicious food" class="home-image">
+
+
     </div>
   </div>
 

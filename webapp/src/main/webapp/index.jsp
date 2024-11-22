@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant Registration</title>
+  <title>Restaurant Website</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,9 +14,10 @@
       overflow: hidden;
       background-color: #333;
       padding: 10px 0;
+      display: flex;
+      justify-content: flex-end; /* Aligns links to the right */
     }
     .navbar a {
-      float: left;
       display: block;
       color: white;
       text-align: center;
@@ -36,6 +37,10 @@
     }
     h1, p {
       margin: 0 0 10px;
+    }
+    .home-image {
+      max-width: 100%;
+      height: auto;
     }
     form input, form button {
       width: 100%;
@@ -59,15 +64,36 @@
   <!-- Navbar -->
   <div class="navbar">
     <a href="#home">Home</a>
+    <a href="#login">Login</a>
     <a href="#order">Order</a>
+    <a href="#services">Services</a>
     <a href="#contact">Contact</a>
-    <a href="#register">Register</a>
   </div>
 
   <!-- Home Section -->
   <div class="section" id="home">
     <h1>Welcome to Our Restaurant!</h1>
-    <p>Explore our delicious menu and enjoy your dining experience with us.</p>
+    <p>
+      A restaurant is a retail establishment that serves prepared food to customers. 
+      Service is generally for eating on premises, though the term has been used to include 
+      take-out establishments and food delivery services. The term covers many types of venues 
+      and a diversity of styles of cuisine and service.
+    </p>
+    <img src="image.png" alt="Delicious food" class="home-image">
+  </div>
+
+  <!-- Login Section -->
+  <div class="section" id="login">
+    <h1>Login</h1>
+    <form action="login_action.php">
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" id="username" required>
+      <br>
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" id="password" required>
+      <br>
+      <button type="submit" class="registerbtn">Login</button>
+    </form>
   </div>
 
   <!-- Order Section -->
@@ -76,40 +102,20 @@
     <p>Place your orders online and enjoy timely delivery.</p>
   </div>
 
+  <!-- Services Section -->
+  <div class="section" id="services">
+    <h1>Our Services</h1>
+    <p>We provide dine-in, take-away, and online delivery services with top-notch quality and hygiene.</p>
+  </div>
+
   <!-- Contact Section -->
   <div class="section" id="contact">
     <h1>Contact Us</h1>
-    <p>Have questions? Reach out to us at support@restaurant.com or call us at +123-456-7890.</p>
-  </div>
-
-  <!-- Registration Form Section -->
-  <div class="section" id="register">
-    <form action="action_page.php">
-      <h1>New User Registration</h1>
-      <p>Please fill in this form to create an account.</p>
-      <hr>
-      <label for="Name"><b>Enter Name of the Customer</b></label>
-      <input type="text" placeholder="Enter Full Name" name="Name" id="Name" required>
-      <br>
-      <label for="mobile"><b>Enter Customer Mobile Number</b></label>
-      <input type="text" placeholder="Enter Mobile Number" name="mobile" id="mobile" required>
-      <br>
-      <label for="email"><b>Enter Customer Email Address</b></label>
-      <input type="text" placeholder="Enter Email" name="email" id="email" required>
-      <br>
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-      <br>
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-      <hr>
-      <br>
-      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-      <button type="submit" class="registerbtn">Register</button>
-    </form>
-    <div class="container signin">
-      <p>Already have an account? <a href="#">Sign in</a>.</p>
-    </div>
+    <p>
+      Have questions? Reach out to us at 
+      <a href="mailto:support@restaurant.com">support@restaurant.com</a> 
+      or call us at +123-456-7890.
+    </p>
   </div>
 
 </body>

@@ -63,6 +63,10 @@
     }
   </style>
   <script>
+    // Static username and password
+    const STATIC_USERNAME = "admin";
+    const STATIC_PASSWORD = "password123";
+
     function showSection(sectionId) {
       // Hide all sections
       const sections = document.querySelectorAll('.section');
@@ -71,6 +75,18 @@
       // Show the selected section
       const selectedSection = document.getElementById(sectionId);
       selectedSection.classList.add('active');
+    }
+
+    function validateLogin(event) {
+      event.preventDefault(); // Prevent form submission
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username && password === STATIC_PASSWORD) {
+        showSection('home'); // Redirect to Home section
+      } else {
+        alert('Invalid Username or Password!');
+      }
     }
   </script>
 </head>
@@ -88,7 +104,7 @@
   <!-- Login Section -->
   <div class="section" id="login">
     <h1>Login</h1>
-    <form action="login_action.php">
+    <form onsubmit="validateLogin(event)">
       <label for="username"><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="username" id="username" required>
       <br>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +15,7 @@
       background-color: #333;
       padding: 10px 0;
       display: flex;
-      justify-content: flex-end; /* Aligns links to the right */
+      justify-content: flex-end;
     }
     .navbar a {
       display: block;
@@ -29,37 +28,37 @@
       background-color: #ddd;
       color: black;
     }
-    .container {
-      padding: 20px;
-    }
     .section {
-      display: none; /* Hide all sections initially */
+      display: none;
       padding: 20px;
       background-color: #f9f9f9;
     }
     .active {
-      display: block; /* Show the active section */
+      display: block;
     }
     h1, p {
       margin: 0 0 10px;
     }
     .home-content {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
     }
-    .home-text {
-      flex: 1;
-      padding-right: 20px;
+    .home-content h1 {
+      margin-bottom: 20px;
     }
     .home-text p {
       margin-bottom: 15px;
       line-height: 1.6;
     }
     .home-image {
-      flex: 1;
       max-width: 100%;
       height: auto;
+    }
+    .order-image {
+      width: 100%;
+      height: auto;
+      display: block;
     }
     .services-image {
       max-width: 100%;
@@ -93,12 +92,11 @@
     }
 
     function validateLogin(event) {
-      event.preventDefault(); 
-      const username = document.getElementById('username').value;
+      event.preventDefault();
       const password = document.getElementById('password').value;
 
       if (password === STATIC_PASSWORD) {
-        showSection('home'); 
+        showSection('home');
       } else {
         alert('Invalid Password!');
       }
@@ -133,13 +131,11 @@
   <!-- Home Section -->
   <div class="section" id="home">
     <div class="home-content">
-      <div class="home-text">
-        <h1>Welcome to Our Restaurant!</h1>
-        <p>A restaurant is a retail establishment that serves prepared food to customers.<br>
-          Service is generally for eating on premises, though the term has been used to include<br>
-          take-out establishments and food delivery services.<br> The term covers many types
-          of venues and a diversity of styles of cuisine and service.</p>
-      </div>
+      <h1>Welcome to Our Restaurant!</h1>
+      <p>A restaurant is a retail establishment that serves prepared food to customers.<br>
+         Service is generally for eating on premises, though the term has been used to include<br>
+         take-out establishments and food delivery services.<br> The term covers many types
+         of venues and a diversity of styles of cuisine and service.</p>
       <img src="https://i.ibb.co/FWYHYRk/Desktop-Free-Food-Images.jpg" alt="Delicious food" class="home-image">
     </div>
   </div>
@@ -147,7 +143,7 @@
   <!-- Order Section -->
   <div class="section" id="order">
     <h1>Order Online</h1>
-    <p>Place your orders online and enjoy timely delivery.</p>
+    <img src="https://i.ibb.co/L9SVwdb/food-order-form-1.jpg" alt="Order food form" class="order-image">
   </div>
 
   <!-- Services Section -->

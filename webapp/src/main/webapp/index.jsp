@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,6 +61,12 @@
       max-width: 100%;
       height: auto;
     }
+    .services-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
     form input, form button {
       width: 100%;
       padding: 10px;
@@ -77,33 +84,28 @@
     }
   </style>
   <script>
-    // Static password
     const STATIC_PASSWORD = "password123";
 
     function showSection(sectionId) {
-      // Hide all sections
       const sections = document.querySelectorAll('.section');
       sections.forEach(section => section.classList.remove('active'));
-
-      // Show the selected section
-      const selectedSection = document.getElementById(sectionId);
-      selectedSection.classList.add('active');
+      document.getElementById(sectionId).classList.add('active');
     }
 
     function validateLogin(event) {
-      event.preventDefault(); // Prevent form submission
+      event.preventDefault(); 
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
       if (password === STATIC_PASSWORD) {
-        showSection('home'); // Redirect to Home section if password is correct
+        showSection('home'); 
       } else {
         alert('Invalid Password!');
       }
     }
   </script>
 </head>
-<body onload="showSection('login')"> <!-- Default section is Login -->
+<body onload="showSection('login')">
 
   <!-- Navbar -->
   <div class="navbar">
@@ -138,9 +140,7 @@
           take-out establishments and food delivery services.<br> The term covers many types
           of venues and a diversity of styles of cuisine and service.</p>
       </div>
-      <img src="https://ibb.co/BP6n60H.jpg" alt="Delicious food" class="home-image">
-
-
+      <img src="https://i.ibb.co/FWYHYRk/Desktop-Free-Food-Images.jpg" alt="Delicious food" class="home-image">
     </div>
   </div>
 
@@ -154,9 +154,7 @@
   <div class="section" id="services">
     <h1>Our Services</h1>
     <p>We provide dine-in, take-away, and online delivery services with top-notch quality and hygiene.</p>
-   </div>
-      <img src="<a href="https://imgbb.com/"><img src="https://i.ibb.co/Q9pR0XG/Restaurant-Food-Order-Form-Free-Template.jpg" alt="Restaurant-Food-Order-Form-Free-Template" border="0"></a>" alt="Delicious food" class="home-image">
-    </div>
+    <img src="https://i.ibb.co/Q9pR0XG/Restaurant-Food-Order-Form-Free-Template.jpg" alt="Services" class="services-image">
   </div>
 
   <!-- Contact Section -->

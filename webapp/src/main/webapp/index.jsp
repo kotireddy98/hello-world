@@ -42,23 +42,40 @@
     .home-content {
       display: flex;
       align-items: flex-start;
-      flex-direction: column;
     }
-    .home-content h1 {
-      margin-bottom: 20px;
+    .home-text {
+      flex: 1;
+      padding-right: 20px;
     }
     .home-text p {
       margin-bottom: 15px;
       line-height: 1.6;
     }
     .home-image {
-      max-width: 100%;
-      height: auto;
-    }
-    .order-image {
+      flex: 1;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .order-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .order-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .order-item img {
+      width: 100px;
       height: auto;
-      display: block;
+      margin-right: 10px;
+    }
+    .order-item input {
+      width: 60px;
+      padding: 5px;
+      margin-right: 10px;
     }
     .services-image {
       max-width: 100%;
@@ -131,11 +148,13 @@
   <!-- Home Section -->
   <div class="section" id="home">
     <div class="home-content">
-      <h1>Welcome to Our Restaurant!</h1>
-      <p>A restaurant is a retail establishment that serves prepared food to customers.<br>
-         Service is generally for eating on premises, though the term has been used to include<br>
-         take-out establishments and food delivery services.<br> The term covers many types
-         of venues and a diversity of styles of cuisine and service.</p>
+      <div class="home-text">
+        <h1>Welcome to Our Restaurant!</h1>
+        <p>A restaurant is a retail establishment that serves prepared food to customers.<br>
+           Service is generally for eating on premises, though the term has been used to include<br>
+           take-out establishments and food delivery services.<br> The term covers many types
+           of venues and a diversity of styles of cuisine and service.</p>
+      </div>
       <img src="https://i.ibb.co/FWYHYRk/Desktop-Free-Food-Images.jpg" alt="Delicious food" class="home-image">
     </div>
   </div>
@@ -143,7 +162,14 @@
   <!-- Order Section -->
   <div class="section" id="order">
     <h1>Order Online</h1>
-    <img src="https://i.ibb.co/L9SVwdb/food-order-form-1.jpg" alt="Order food form" class="order-image">
+    <div class="order-section">
+      <div class="order-item">
+        <img src="https://i.ibb.co/L9SVwdb/food-order-form-1.jpg" alt="Dish">
+        <label for="quantity1">Quantity:</label>
+        <input type="number" id="quantity1" name="quantity1" min="1" value="1">
+      </div>
+      <button type="button" onclick="alert('Order placed successfully!')">Place Order</button>
+    </div>
   </div>
 
   <!-- Services Section -->

@@ -124,7 +124,7 @@
       and a diversity of styles of cuisine and service.
     </p>
     <!-- Ensure the image path is correct -->
-    <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?cs=srgb&dl=pexels-pixabay-262978.jpg&fm=jpg" alt="Delicious food" class="home-image">
+    <img src="https://ibb.co/vYVcg78" alt="Delicious food" class="home-image">
   </div>
 
   <!-- Order Section -->

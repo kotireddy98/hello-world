@@ -32,8 +32,12 @@
       padding: 20px;
     }
     .section {
+      display: none; /* Hide all sections initially */
       padding: 20px;
       background-color: #f9f9f9;
+    }
+    .active {
+      display: block; /* Show the active section */
     }
     h1, p {
       margin: 0 0 10px;
@@ -58,28 +62,27 @@
       background-color: #45a049;
     }
   </style>
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+
+      // Show the selected section
+      const selectedSection = document.getElementById(sectionId);
+      selectedSection.classList.add('active');
+    }
+  </script>
 </head>
-<body>
+<body onload="showSection('login')"> <!-- Default section is Login -->
 
   <!-- Navbar -->
   <div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#login">Login</a>
-    <a href="#order">Order</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </div>
-
-  <!-- Home Section -->
-  <div class="section" id="home">
-    <h1>Welcome to Our Restaurant!</h1>
-    <p>
-      A restaurant is a retail establishment that serves prepared food to customers. 
-      Service is generally for eating on premises, though the term has been used to include 
-      take-out establishments and food delivery services. The term covers many types of venues 
-      and a diversity of styles of cuisine and service.
-    </p>
-    <img src="image.png" alt="Delicious food" class="home-image">
+    <a href="javascript:void(0)" onclick="showSection('login')">Login</a>
+    <a href="javascript:void(0)" onclick="showSection('home')">Home</a>
+    <a href="javascript:void(0)" onclick="showSection('order')">Order</a>
+    <a href="javascript:void(0)" onclick="showSection('services')">Services</a>
+    <a href="javascript:void(0)" onclick="showSection('contact')">Contact</a>
   </div>
 
   <!-- Login Section -->
@@ -94,6 +97,18 @@
       <br>
       <button type="submit" class="registerbtn">Login</button>
     </form>
+  </div>
+
+  <!-- Home Section -->
+  <div class="section" id="home">
+    <h1>Welcome to Our Restaurant!</h1>
+    <p>
+      A restaurant is a retail establishment that serves prepared food to customers. 
+      Service is generally for eating on premises, though the term has been used to include 
+      take-out establishments and food delivery services. The term covers many types of venues 
+      and a diversity of styles of cuisine and service.
+    </p>
+    <img src="image.png" alt="Delicious food" class="home-image">
   </div>
 
   <!-- Order Section -->

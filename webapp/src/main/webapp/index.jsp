@@ -63,8 +63,7 @@
     }
   </style>
   <script>
-    // Static username and password
-    const STATIC_USERNAME = "admin";
+    // Static password
     const STATIC_PASSWORD = "password123";
 
     function showSection(sectionId) {
@@ -82,10 +81,10 @@
       const username = document.getElementById('username').value;
       const password = document.getElementById('password').value;
 
-      if (username && password === STATIC_PASSWORD) {
-        showSection('home'); // Redirect to Home section
+      if (password === STATIC_PASSWORD) {
+        showSection('home'); // Redirect to Home section if password is correct
       } else {
-        alert('Invalid Username or Password!');
+        alert('Invalid Password!');
       }
     }
   </script>
@@ -124,7 +123,8 @@
       take-out establishments and food delivery services. The term covers many types of venues 
       and a diversity of styles of cuisine and service.
     </p>
-    <img src="image.png" alt="Delicious food" class="home-image">
+    <!-- Ensure the image path is correct -->
+    <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?cs=srgb&dl=pexels-pixabay-262978.jpg&fm=jpg" alt="Delicious food" class="home-image">
   </div>
 
   <!-- Order Section -->
